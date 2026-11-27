@@ -8,4 +8,10 @@ pipeline {
             }
         }
     }
+
+    stage('Docker') {
+    steps {
+        sh 'docker run --rm alpine echo "Hello from Jenkins"'
+        }
+    }
 }

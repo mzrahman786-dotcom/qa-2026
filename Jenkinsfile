@@ -7,11 +7,11 @@ pipeline {
                 sh 'ls -l LoginTest.java BillingTest.java'
             }
         }
-    }
 
-    stage('Docker') {
-    steps {
-        sh 'docker run --rm alpine echo "Hello from Jenkins"'
+        stage('Docker') {
+            steps {
+                sh 'docker run --rm alpine echo "Hello from Jenkins"'
+            }
         }
     }
 }
